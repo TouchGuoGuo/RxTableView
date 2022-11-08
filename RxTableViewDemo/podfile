@@ -1,0 +1,8 @@
+
+use_frameworks!
+
+target 'RxTableViewDemo' do
+
+pod 'RxTableView+RxCollectionView'
+
+end
