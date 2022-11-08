@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "RxTableView"
+  spec.name         = "RxTableView+RxCollectionView"
   spec.version      = "1.0.0"
   spec.summary      = "结合RxSwift+RxDataSource便捷设置UITableView/UICollectionView数据源."
 
