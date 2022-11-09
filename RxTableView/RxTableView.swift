@@ -2,7 +2,7 @@
 //  RxTableView.swift
 //  RxSwiftDemo
 //
-//  Created by 臧志明 on 2022/10/31.
+//  Created by guoguo on 2022/10/31.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ import EmptyDataSet_Swift
 import MJRefresh
 import RxGesture
 
-class RxTableView: UITableView {
+open class RxTableView: UITableView {
 
     private var disposebag = DisposeBag()
     
@@ -51,27 +51,28 @@ class RxTableView: UITableView {
 
     
     /// tableview是否允许编辑
-    var allowEdit:Bool = false {
+    public var allowEdit:Bool = false {
         didSet {
+            setEditing(allowEdit, animated: false)
             reloadData()
         }
     }
     
     /// 空数据标题 （不设置不显示）
-    var emptyModel:RxEmptyModel? {
+    public var emptyModel:RxEmptyModel? {
         didSet {
             setupEmptyView()
         }
     }
         
     /// 绑定数据的数据源 使用方式： tableview.list.accept
-    var list = BehaviorRelay<[RxSectionModel]>(value: [])
+    public var list = BehaviorRelay<[RxSectionModel]>(value: [])
     /// cell中视图点击信号
-    let gestureSubject = PublishSubject<RxGestureModel>()
+    public let gestureSubject = PublishSubject<RxGestureModel>()
     /// 下拉刷新的信号
-    let headerRefreshSubject = PublishSubject<Void>()
+    public let headerRefreshSubject = PublishSubject<Void>()
     /// 加载更多的信号
-    let footerRefreshSubject = PublishSubject<Void>()
+    public let footerRefreshSubject = PublishSubject<Void>()
     
     init(style:UITableView.Style = .plain,allowEdit:Bool = false) {
         super.init(frame: .zero, style: style)
@@ -84,7 +85,7 @@ class RxTableView: UITableView {
         bindObservable()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         bindObservable()
     }
@@ -136,8 +137,6 @@ extension RxTableView {
     
     /// 将数据源和tableView进行动态绑定
     private func bindObservable() {
-        separatorStyle = .none
-        tableFooterView = UIView()
         if #available(iOS 15.0, *) {
             sectionHeaderTopPadding = 0
         }
@@ -175,19 +174,19 @@ extension RxTableView {
 // MARK: 空数据以及占位图
 extension RxTableView : EmptyDataSetSource, EmptyDataSetDelegate {
     
-    func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
+    public func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
         true
     }
     
-    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+    public func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return self.emptyModel?.title
     }
     
-    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+    public func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return self.emptyModel?.description
     }
     
-    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+    public func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
         guard let image = self.emptyModel?.image else { return nil }
         let imageSize = image.size
         let imageRatio = imageSize.height / imageSize.width

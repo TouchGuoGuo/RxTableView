@@ -2,7 +2,7 @@
 //  RxCollectionViewCell.swift
 //  RxSwiftDemo
 //
-//  Created by 臧志明 on 2022/10/31.
+//  Created by guoguo on 2022/10/31.
 //
 
 import UIKit
