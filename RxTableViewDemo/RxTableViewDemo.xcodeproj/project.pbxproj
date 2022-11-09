@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E236C450291A4E3600F6EA54 /* DemoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C44E291A4E3600F6EA54 /* DemoListCell.swift */; };
+		E236C451291A4E3600F6EA54 /* DemoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C44F291A4E3600F6EA54 /* DemoListCell.xib */; };
+		E236C459291A4F2E00F6EA54 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C453291A4F2E00F6EA54 /* UIFont+Extension.swift */; };
+		E236C45A291A4F2E00F6EA54 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C454291A4F2E00F6EA54 /* UIColor+Extension.swift */; };
+		E236C45B291A4F2E00F6EA54 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C455291A4F2E00F6EA54 /* NSObject+Extension.swift */; };
+		E236C45C291A4F2E00F6EA54 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C456291A4F2E00F6EA54 /* UIView+Extension.swift */; };
+		E236C45D291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C457291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift */; };
+		E236C45E291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C458291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift */; };
+		E236C461291A59D800F6EA54 /* DemoTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C45F291A59D800F6EA54 /* DemoTableViewVC.swift */; };
+		E236C462291A59D800F6EA54 /* DemoTableViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C460291A59D800F6EA54 /* DemoTableViewVC.xib */; };
+		E236C465291A66F600F6EA54 /* DemoCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */; };
+		E236C466291A66F600F6EA54 /* DemoCollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */; };
+		E236C46B291A68C500F6EA54 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */; };
+		E236C46C291A68C500F6EA54 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */; };
 		E7206D1726A4670004149B8A /* Pods_RxTableViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABC80966F6A4AD4D8DD9634 /* Pods_RxTableViewDemo.framework */; };
 		FF8B7C052919FF28002AEBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C042919FF28002AEBDF /* AppDelegate.swift */; };
 		FF8B7C092919FF28002AEBDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C082919FF28002AEBDF /* ViewController.swift */; };
@@ -21,6 +35,20 @@
 		42F324CA54C7703C8BB63237 /* Pods-RxTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTableViewDemo.release.xcconfig"; path = "Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5ABC80966F6A4AD4D8DD9634 /* Pods_RxTableViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTableViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6598091A937AFB8A09DA104B /* Pods-RxTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTableViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E236C44E291A4E3600F6EA54 /* DemoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListCell.swift; sourceTree = "<group>"; };
+		E236C44F291A4E3600F6EA54 /* DemoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoListCell.xib; sourceTree = "<group>"; };
+		E236C453291A4F2E00F6EA54 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		E236C454291A4F2E00F6EA54 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E236C455291A4F2E00F6EA54 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		E236C456291A4F2E00F6EA54 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E236C457291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
+		E236C458291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftEntryKit.swift"; sourceTree = "<group>"; };
+		E236C45F291A59D800F6EA54 /* DemoTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewVC.swift; sourceTree = "<group>"; };
+		E236C460291A59D800F6EA54 /* DemoTableViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewVC.xib; sourceTree = "<group>"; };
+		E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewVC.swift; sourceTree = "<group>"; };
+		E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewVC.xib; sourceTree = "<group>"; };
+		E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
+		E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
 		FF8B7C012919FF28002AEBDF /* RxTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8B7C042919FF28002AEBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8B7C082919FF28002AEBDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +56,7 @@
 		FF8B7C0D2919FF2C002AEBDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8B7C102919FF2C002AEBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF8B7C122919FF2C002AEBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF8B7C182919FF95002AEBDF /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		FF8B7C182919FF95002AEBDF /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FF8B7C1A291A038C002AEBDF /* DemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +89,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E236C452291A4F2E00F6EA54 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E236C453291A4F2E00F6EA54 /* UIFont+Extension.swift */,
+				E236C454291A4F2E00F6EA54 /* UIColor+Extension.swift */,
+				E236C455291A4F2E00F6EA54 /* NSObject+Extension.swift */,
+				E236C456291A4F2E00F6EA54 /* UIView+Extension.swift */,
+				E236C457291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift */,
+				E236C458291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E236C467291A68A100F6EA54 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B7C1A291A038C002AEBDF /* DemoVC.swift */,
+				E236C44E291A4E3600F6EA54 /* DemoListCell.swift */,
+				E236C44F291A4E3600F6EA54 /* DemoListCell.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		E236C468291A68AD00F6EA54 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E236C45F291A59D800F6EA54 /* DemoTableViewVC.swift */,
+				E236C460291A59D800F6EA54 /* DemoTableViewVC.xib */,
+				E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */,
+				E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		FF8B7BF82919FF28002AEBDF = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +145,13 @@
 		FF8B7C032919FF28002AEBDF /* RxTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E236C452291A4F2E00F6EA54 /* Extension */,
 				FF8B7C042919FF28002AEBDF /* AppDelegate.swift */,
 				FF8B7C082919FF28002AEBDF /* ViewController.swift */,
-				FF8B7C1A291A038C002AEBDF /* DemoVC.swift */,
+				E236C467291A68A100F6EA54 /* List */,
+				E236C468291A68AD00F6EA54 /* TableView */,
+				E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */,
+				E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */,
 				FF8B7C0A2919FF28002AEBDF /* Main.storyboard */,
 				FF8B7C0D2919FF2C002AEBDF /* Assets.xcassets */,
 				FF8B7C0F2919FF2C002AEBDF /* LaunchScreen.storyboard */,
@@ -155,9 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8B7C112919FF2C002AEBDF /* LaunchScreen.storyboard in Resources */,
+				E236C466291A66F600F6EA54 /* DemoCollectionViewVC.xib in Resources */,
+				E236C451291A4E3600F6EA54 /* DemoListCell.xib in Resources */,
 				FF8B7C0E2919FF2C002AEBDF /* Assets.xcassets in Resources */,
 				FF8B7C192919FF95002AEBDF /* podfile in Resources */,
 				FF8B7C0C2919FF28002AEBDF /* Main.storyboard in Resources */,
+				E236C46C291A68C500F6EA54 /* DemoTableViewCell.xib in Resources */,
+				E236C462291A59D800F6EA54 /* DemoTableViewVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +282,17 @@
 			files = (
 				FF8B7C092919FF28002AEBDF /* ViewController.swift in Sources */,
 				FF8B7C052919FF28002AEBDF /* AppDelegate.swift in Sources */,
+				E236C45C291A4F2E00F6EA54 /* UIView+Extension.swift in Sources */,
+				E236C45D291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift in Sources */,
+				E236C450291A4E3600F6EA54 /* DemoListCell.swift in Sources */,
+				E236C45A291A4F2E00F6EA54 /* UIColor+Extension.swift in Sources */,
+				E236C459291A4F2E00F6EA54 /* UIFont+Extension.swift in Sources */,
 				FF8B7C1B291A038C002AEBDF /* DemoVC.swift in Sources */,
+				E236C45E291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift in Sources */,
+				E236C461291A59D800F6EA54 /* DemoTableViewVC.swift in Sources */,
+				E236C465291A66F600F6EA54 /* DemoCollectionViewVC.swift in Sources */,
+				E236C46B291A68C500F6EA54 /* DemoTableViewCell.swift in Sources */,
+				E236C45B291A4F2E00F6EA54 /* NSObject+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

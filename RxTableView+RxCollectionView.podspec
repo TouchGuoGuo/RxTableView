@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "RxTableView/**/*.swift"
-  #spec.exclude_files = "RxTableView/Exclude"
+  spec.exclude_files = "RxTableView/RxTableViewDemo"
 
   # spec.public_header_files = "Classes/**/*.h"
 
