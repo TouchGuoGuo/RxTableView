@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxTableView_RxCollectionView
 import RxSwift
 
 struct DemoListModel :  RxSectionType {
@@ -18,6 +17,7 @@ struct DemoListModel :  RxSectionType {
 
 enum DemoListStyle {
     case tableview
+    case aniamtionTableView
     case collectionview
 }
 
@@ -27,6 +27,7 @@ class DemoVC: UIViewController {
 
     var models:[DemoListModel] = [
         DemoListModel(title:"TableView",style: .tableview),
+        DemoListModel(title:"AnimationTableView",style: .aniamtionTableView),
         DemoListModel(title:"CollectionView",style: .collectionview)
     ]
     
@@ -63,6 +64,9 @@ class DemoVC: UIViewController {
                 switch model.style {
                 case .tableview:
                     let vc = DemoTableViewVC()
+                    self.show(vc, sender: self)
+                case .aniamtionTableView:
+                    let vc = DemoAnimationTableViewVC()
                     self.show(vc, sender: self)
                 case .collectionview:
                     let vc = DemoCollectionViewVC()

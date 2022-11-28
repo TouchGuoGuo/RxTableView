@@ -3,6 +3,12 @@ use_frameworks!
 
 target 'RxTableViewDemo' do
 
-pod 'RxTableView+RxCollectionView'
+#pod 'RxTableView+RxCollectionView'
 
+pod 'RxSwift'
+pod 'RxDataSources'
+pod 'MJRefresh'
+pod 'EmptyDataSet-Swift'
+pod 'RxGesture'
+pod 'ObjectMapper'
 end

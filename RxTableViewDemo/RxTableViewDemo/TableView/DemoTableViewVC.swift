@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxTableView_RxCollectionView
 import RxSwift
 
 
@@ -105,8 +104,10 @@ class DemoTableViewVC: UIViewController {
         
         tableview.gestureSubject.subscribe { [weak self] event in
             guard let self = self else { return }
-            if let model = event.element {
-                self.showActionAlert(title: "点击cell中的组件", string: "code:-\(model.code)-model:\(model.model.debugDescription)")
+            if let element = event.element {
+                let indexPath = element.indexPath
+                let model = element.model
+                self.showActionAlert(title: "点击cell中的组件", string: "code:-\(model.code)-model:\(model.model.debugDescription)--选中的行\(indexPath)")
             }
         }.disposed(by: disposebag)
         

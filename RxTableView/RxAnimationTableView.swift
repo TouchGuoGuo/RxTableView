@@ -1,8 +1,8 @@
 //
-//  RxTableView.swift
-//  RxSwiftDemo
+//  RxAnimationTableView.swift
+//  RxTableViewDemo
 //
-//  Created by guoguo on 2022/10/31.
+//  Created by guoguo on 2022/11/25.
 //
 
 import UIKit
@@ -13,16 +13,15 @@ import EmptyDataSet_Swift
 import MJRefresh
 import RxGesture
 
-open class RxTableView: UITableView {
+open class RxAnimationTableView: UITableView {
 
     private var disposebag = DisposeBag()
-    
+
     /// 设置tableView的数据源
-    private lazy var sectionSource = RxTableViewSectionedReloadDataSource<RxSectionModel> { dataSource, tableview, indexPath, element in
+    private lazy var sectionSource = RxTableViewSectionedAnimatedDataSource<RxAnimationSectionModel>(animationConfiguration: .init(insertAnimation: .automatic, reloadAnimation: .automatic, deleteAnimation: .automatic), decideViewTransition: { _, _, _ in
+            .reload
+    }, configureCell: { dataSource, tableview, indexPath, element in
         var cell = tableview.dequeueReusableCell(withIdentifier: element.cellName)
-        if cell == nil {
-            cell = RxTableViewCell(style: .value1, reuseIdentifier: element.cellName)
-        }
         guard let cell = cell as? RxTableViewCell else {
             return RxTableViewCell(style: .value1, reuseIdentifier: element.cellName)
         }
@@ -37,19 +36,20 @@ open class RxTableView: UITableView {
             }
         }
         return cell
-    } canEditRowAtIndexPath: { dataSource, indexPath in
+    }, canEditRowAtIndexPath: { dataSource, indexPath in
         let source = dataSource.sectionModels
         let items = source[indexPath.section]
         let model = items.items[indexPath.row]
         return self.allowEdit
-    } canMoveRowAtIndexPath: { dataSource, indexPath in
+    } ,canMoveRowAtIndexPath: { dataSource, indexPath in
         let source = dataSource.sectionModels
         let items = source[indexPath.section]
         let model = items.items[indexPath.row]
         return self.allowEdit
-    }
-
+    })
     
+     
+
     /// tableview是否允许编辑
     public var allowEdit:Bool = false {
         didSet {
@@ -64,9 +64,9 @@ open class RxTableView: UITableView {
             setupEmptyView()
         }
     }
-        
+
     /// 绑定数据的数据源 使用方式： tableview.list.accept
-    public var list = BehaviorRelay<[RxSectionModel]>(value: [])
+    public var list = BehaviorRelay<[RxAnimationSectionModel]>(value: [])
     /// cell中视图点击信号
     public let gestureSubject = PublishSubject<(model:RxGestureModel,indexPath:IndexPath)>()
     /// 下拉刷新的信号
@@ -93,7 +93,7 @@ open class RxTableView: UITableView {
 }
 
 // MARK: 基础用法
-extension RxTableView {
+extension RxAnimationTableView {
     
     /// 装载下拉刷新功能
     func setupHeaderRefresh() {
@@ -133,7 +133,7 @@ extension RxTableView {
 }
 
 // MARK: 初始化方法以及私有方法
-extension RxTableView {
+extension RxAnimationTableView {
     
     /// 将数据源和tableView进行动态绑定
     private func bindObservable() {
@@ -172,7 +172,7 @@ extension RxTableView {
 }
 
 // MARK: 空数据以及占位图
-extension RxTableView : EmptyDataSetSource, EmptyDataSetDelegate {
+extension RxAnimationTableView : EmptyDataSetSource, EmptyDataSetDelegate {
     
     public func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
         true
@@ -197,15 +197,7 @@ extension RxTableView : EmptyDataSetSource, EmptyDataSetDelegate {
     }
 }
 
-extension UIImage {
-    func resetImageSize(size:CGSize) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-        draw(in: CGRect(origin: .zero, size: size))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
-    }
-}
+
 
 
 

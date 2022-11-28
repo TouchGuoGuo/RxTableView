@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RxTableView_RxCollectionView
+
 class DemoTableViewCell: RxTableViewCell {
 
     @IBOutlet weak var yellowview: UIView!

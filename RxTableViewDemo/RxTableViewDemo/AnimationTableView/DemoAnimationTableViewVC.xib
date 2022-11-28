@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoTableViewVC" customModule="RxTableViewDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoAnimationTableViewVC" customModule="RxTableViewDemo" customModuleProvider="target">
             <connections>
-                <outlet property="tableview" destination="YxU-UO-Tp7" id="Uxw-RC-n6h"/>
+                <outlet property="tableview" destination="FnM-kb-Y5e" id="rOQ-ta-MyJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YxU-UO-Tp7" customClass="RxTableView" customModule="RxTableViewDemo" customModuleProvider="target">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FnM-kb-Y5e" customClass="RxAnimationTableView" customModule="RxTableViewDemo" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -28,10 +28,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="YxU-UO-Tp7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6mI-xO-TDv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YxU-UO-Tp7" secondAttribute="bottom" id="Gxc-nF-Msr"/>
-                <constraint firstItem="YxU-UO-Tp7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aK0-wl-aHD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YxU-UO-Tp7" secondAttribute="trailing" id="bxJ-P4-8gn"/>
+                <constraint firstItem="FnM-kb-Y5e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gdr-Ya-23R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FnM-kb-Y5e" secondAttribute="trailing" id="VN1-xH-LhA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FnM-kb-Y5e" secondAttribute="bottom" id="kfb-Li-Tu5"/>
+                <constraint firstItem="FnM-kb-Y5e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nX7-8C-Djc"/>
             </constraints>
             <point key="canvasLocation" x="140" y="21"/>
         </view>

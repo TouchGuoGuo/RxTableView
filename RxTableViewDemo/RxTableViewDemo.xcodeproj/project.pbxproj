@@ -21,6 +21,17 @@
 		E236C466291A66F600F6EA54 /* DemoCollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */; };
 		E236C46B291A68C500F6EA54 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */; };
 		E236C46C291A68C500F6EA54 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */; };
+		E2B2C2CA2930C219007EF40E /* RxAnimationSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */; };
+		E2B2C2CE2930C73E007EF40E /* DemoAnimationTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */; };
+		E2B2C2CF2930C73E007EF40E /* DemoAnimationTableViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */; };
+		E2B2C2D22930D4E7007EF40E /* DemoAnimationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B2C2D02930D4E7007EF40E /* DemoAnimationTableViewCell.xib */; };
+		E2B2C2D32930D4E7007EF40E /* DemoAnimationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2D12930D4E7007EF40E /* DemoAnimationTableViewCell.swift */; };
+		E2F7925F2930B9010074644C /* RxCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925A2930B9010074644C /* RxCollectionView.swift */; };
+		E2F792602930B9010074644C /* RxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925B2930B9010074644C /* RxTableView.swift */; };
+		E2F792612930B9010074644C /* RxSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925C2930B9010074644C /* RxSectionModel.swift */; };
+		E2F792622930B9010074644C /* RxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925D2930B9010074644C /* RxCollectionViewCell.swift */; };
+		E2F792632930B9010074644C /* RxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925E2930B9010074644C /* RxTableViewCell.swift */; };
+		E2F792652930BB250074644C /* RxAnimationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F792642930BB250074644C /* RxAnimationTableView.swift */; };
 		E7206D1726A4670004149B8A /* Pods_RxTableViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABC80966F6A4AD4D8DD9634 /* Pods_RxTableViewDemo.framework */; };
 		FF8B7C052919FF28002AEBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C042919FF28002AEBDF /* AppDelegate.swift */; };
 		FF8B7C092919FF28002AEBDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C082919FF28002AEBDF /* ViewController.swift */; };
@@ -49,6 +60,17 @@
 		E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewVC.xib; sourceTree = "<group>"; };
 		E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
 		E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
+		E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationSectionModel.swift; sourceTree = "<group>"; };
+		E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAnimationTableViewVC.swift; sourceTree = "<group>"; };
+		E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoAnimationTableViewVC.xib; sourceTree = "<group>"; };
+		E2B2C2D02930D4E7007EF40E /* DemoAnimationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoAnimationTableViewCell.xib; sourceTree = "<group>"; };
+		E2B2C2D12930D4E7007EF40E /* DemoAnimationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAnimationTableViewCell.swift; sourceTree = "<group>"; };
+		E2F7925A2930B9010074644C /* RxCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionView.swift; sourceTree = "<group>"; };
+		E2F7925B2930B9010074644C /* RxTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableView.swift; sourceTree = "<group>"; };
+		E2F7925C2930B9010074644C /* RxSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSectionModel.swift; sourceTree = "<group>"; };
+		E2F7925D2930B9010074644C /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2F7925E2930B9010074644C /* RxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewCell.swift; sourceTree = "<group>"; };
+		E2F792642930BB250074644C /* RxAnimationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationTableView.swift; sourceTree = "<group>"; };
 		FF8B7C012919FF28002AEBDF /* RxTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8B7C042919FF28002AEBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8B7C082919FF28002AEBDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +145,32 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		E2B2C2CB2930C718007EF40E /* AnimationTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */,
+				E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */,
+				E2B2C2D12930D4E7007EF40E /* DemoAnimationTableViewCell.swift */,
+				E2B2C2D02930D4E7007EF40E /* DemoAnimationTableViewCell.xib */,
+			);
+			path = AnimationTableView;
+			sourceTree = "<group>";
+		};
+		E2F792592930B9010074644C /* RxTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E2F7925A2930B9010074644C /* RxCollectionView.swift */,
+				E2F7925B2930B9010074644C /* RxTableView.swift */,
+				E2F792642930BB250074644C /* RxAnimationTableView.swift */,
+				E2F7925C2930B9010074644C /* RxSectionModel.swift */,
+				E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */,
+				E2F7925D2930B9010074644C /* RxCollectionViewCell.swift */,
+				E2F7925E2930B9010074644C /* RxTableViewCell.swift */,
+			);
+			name = RxTableView;
+			path = ../../RxTableView;
+			sourceTree = "<group>";
+		};
 		FF8B7BF82919FF28002AEBDF = {
 			isa = PBXGroup;
 			children = (
@@ -145,11 +193,13 @@
 		FF8B7C032919FF28002AEBDF /* RxTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E2F792592930B9010074644C /* RxTableView */,
 				E236C452291A4F2E00F6EA54 /* Extension */,
 				FF8B7C042919FF28002AEBDF /* AppDelegate.swift */,
 				FF8B7C082919FF28002AEBDF /* ViewController.swift */,
 				E236C467291A68A100F6EA54 /* List */,
 				E236C468291A68AD00F6EA54 /* TableView */,
+				E2B2C2CB2930C718007EF40E /* AnimationTableView */,
 				E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */,
 				E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */,
 				FF8B7C0A2919FF28002AEBDF /* Main.storyboard */,
@@ -171,7 +221,7 @@
 				FF8B7BFD2919FF28002AEBDF /* Sources */,
 				FF8B7BFE2919FF28002AEBDF /* Frameworks */,
 				FF8B7BFF2919FF28002AEBDF /* Resources */,
-				9E3768678C7F4DFB21D779EB /* [CP] Embed Pods Frameworks */,
+				210613D6BF97D5A4603EC7DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,8 +270,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B2C2CF2930C73E007EF40E /* DemoAnimationTableViewVC.xib in Resources */,
 				FF8B7C112919FF2C002AEBDF /* LaunchScreen.storyboard in Resources */,
 				E236C466291A66F600F6EA54 /* DemoCollectionViewVC.xib in Resources */,
+				E2B2C2D22930D4E7007EF40E /* DemoAnimationTableViewCell.xib in Resources */,
 				E236C451291A4E3600F6EA54 /* DemoListCell.xib in Resources */,
 				FF8B7C0E2919FF2C002AEBDF /* Assets.xcassets in Resources */,
 				FF8B7C192919FF95002AEBDF /* podfile in Resources */,
@@ -234,6 +286,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		210613D6BF97D5A4603EC7DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3ED52E8106641927F42DD43F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,23 +325,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9E3768678C7F4DFB21D779EB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,18 +333,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8B7C092919FF28002AEBDF /* ViewController.swift in Sources */,
+				E2B2C2D32930D4E7007EF40E /* DemoAnimationTableViewCell.swift in Sources */,
 				FF8B7C052919FF28002AEBDF /* AppDelegate.swift in Sources */,
 				E236C45C291A4F2E00F6EA54 /* UIView+Extension.swift in Sources */,
+				E2B2C2CE2930C73E007EF40E /* DemoAnimationTableViewVC.swift in Sources */,
 				E236C45D291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift in Sources */,
 				E236C450291A4E3600F6EA54 /* DemoListCell.swift in Sources */,
 				E236C45A291A4F2E00F6EA54 /* UIColor+Extension.swift in Sources */,
 				E236C459291A4F2E00F6EA54 /* UIFont+Extension.swift in Sources */,
+				E2F792632930B9010074644C /* RxTableViewCell.swift in Sources */,
 				FF8B7C1B291A038C002AEBDF /* DemoVC.swift in Sources */,
+				E2F792602930B9010074644C /* RxTableView.swift in Sources */,
 				E236C45E291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift in Sources */,
 				E236C461291A59D800F6EA54 /* DemoTableViewVC.swift in Sources */,
 				E236C465291A66F600F6EA54 /* DemoCollectionViewVC.swift in Sources */,
+				E2F792652930BB250074644C /* RxAnimationTableView.swift in Sources */,
 				E236C46B291A68C500F6EA54 /* DemoTableViewCell.swift in Sources */,
+				E2F7925F2930B9010074644C /* RxCollectionView.swift in Sources */,
+				E2B2C2CA2930C219007EF40E /* RxAnimationSectionModel.swift in Sources */,
+				E2F792622930B9010074644C /* RxCollectionViewCell.swift in Sources */,
 				E236C45B291A4F2E00F6EA54 /* NSObject+Extension.swift in Sources */,
+				E2F792612930B9010074644C /* RxSectionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

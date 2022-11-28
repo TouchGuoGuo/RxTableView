@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxTableView_RxCollectionView
 
 class DemoListCell: RxTableViewCell {
 
