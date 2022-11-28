@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RxTableView+RxCollectionView"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "结合RxSwift+RxDataSource便捷设置UITableView/UICollectionView数据源."
 
   # This description is used to generate tags and improve search results.
