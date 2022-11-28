@@ -7,7 +7,6 @@
 
 import Foundation
 import RxDataSources
-import ObjectMapper
 
 
 public struct RxAnimationSectionModel {
