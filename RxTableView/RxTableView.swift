@@ -96,10 +96,10 @@ open class RxTableView: UITableView {
 }
 
 // MARK: 基础用法
-extension RxTableView {
+public extension RxTableView {
     
     /// 装载下拉刷新功能
-    public func setupHeaderRefresh() {
+    func setupHeaderRefresh() {
         let header = MJRefreshNormalHeader { [weak self] in
             guard let self = self else { return }
             self.headerRefreshSubject.onNext(())
@@ -115,7 +115,7 @@ extension RxTableView {
     
     /// 装在自定义下拉刷新功能
     /// - Parameter header: 下拉刷新组件
-    public func setupCustomRefresh(header:MJRefreshHeader) {
+    func setupCustomRefresh(header:MJRefreshHeader) {
         header.refreshingBlock = { [weak self] in
             guard let self = self else { return }
             self.headerRefreshSubject.onNext(())
@@ -124,7 +124,7 @@ extension RxTableView {
     }
     
     /// 装载加载更多功能
-    public func setupFooterRefresh() {
+    func setupFooterRefresh() {
         let footer = MJRefreshBackNormalFooter { [weak self] in
             guard let self = self else { return }
             self.footerRefreshSubject.onNext(())
@@ -139,7 +139,7 @@ extension RxTableView {
     
     /// 装在自定义加载更多功能
     /// - Parameter footer: 加载更多组件
-    public func setupCustomRefresh(footer:MJRefreshFooter) {
+    func setupCustomRefresh(footer:MJRefreshFooter) {
         footer.refreshingBlock = { [weak self] in
             guard let self = self else { return }
             self.footerRefreshSubject.onNext(())
