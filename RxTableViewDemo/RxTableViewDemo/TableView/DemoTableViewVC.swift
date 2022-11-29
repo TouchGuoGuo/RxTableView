@@ -7,7 +7,7 @@
 
 import UIKit
 import RxSwift
-
+import MJRefresh
 
 struct DemoTableViewModel : RxSectionType {
     var cellName: String = DemoTableViewCell.className
@@ -45,6 +45,8 @@ class DemoTableViewVC: UIViewController {
     @IBOutlet weak var tableview: RxTableView! {
         didSet {
             tableview.rx.setDelegate(self).disposed(by: disposebag)
+            tableview.setupHeaderRefresh()
+            tableview.setupFooterRefresh()
         }
     }
     
@@ -55,6 +57,19 @@ class DemoTableViewVC: UIViewController {
         setupItem()
         binderSource()
         loadAction()
+        
+        tableview.headerRefreshSubject.subscribe { [weak self] _ in
+            guard let self = self else { return }
+            self.tableview.list.accept(self.sections)
+        }.disposed(by: disposebag)
+        
+        tableview.footerRefreshSubject.subscribe { [weak self] _ in
+            guard let self = self else { return }
+            let section = RxSectionModel(items:self.source1)
+            self.sections.append(section)
+            self.tableview.list.accept(self.sections)
+        }.disposed(by: disposebag)
+        
     }
     
     

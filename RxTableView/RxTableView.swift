@@ -48,7 +48,6 @@ open class RxTableView: UITableView {
         let model = items.items[indexPath.row]
         return self.allowEdit
     }
-
     
     /// tableview是否允许编辑
     public var allowEdit:Bool = false {
@@ -64,7 +63,11 @@ open class RxTableView: UITableView {
             setupEmptyView()
         }
     }
-        
+    
+    /// 数据源
+    public var sections:[RxSectionModel] {
+        return list.value
+    }
     /// 绑定数据的数据源 使用方式： tableview.list.accept
     public var list = BehaviorRelay<[RxSectionModel]>(value: [])
     /// cell中视图点击信号
@@ -96,7 +99,7 @@ open class RxTableView: UITableView {
 extension RxTableView {
     
     /// 装载下拉刷新功能
-    func setupHeaderRefresh() {
+    public func setupHeaderRefresh() {
         let header = MJRefreshNormalHeader { [weak self] in
             guard let self = self else { return }
             self.headerRefreshSubject.onNext(())
@@ -110,8 +113,18 @@ extension RxTableView {
         mj_header = header
     }
     
+    /// 装在自定义下拉刷新功能
+    /// - Parameter header: 下拉刷新组件
+    public func setupCustomRefresh(header:MJRefreshHeader) {
+        header.refreshingBlock = { [weak self] in
+            guard let self = self else { return }
+            self.headerRefreshSubject.onNext(())
+        }
+        mj_header = header
+    }
+    
     /// 装载加载更多功能
-    func setupFooterRefresh() {
+    public func setupFooterRefresh() {
         let footer = MJRefreshBackNormalFooter { [weak self] in
             guard let self = self else { return }
             self.footerRefreshSubject.onNext(())
@@ -121,6 +134,16 @@ extension RxTableView {
         footer.setTitle("松开立即加载更多", for: MJRefreshState.pulling)
         footer.setTitle("正在加载..", for: MJRefreshState.refreshing)
         footer.setTitle("已经到底啦", for: MJRefreshState.noMoreData)
+        mj_footer = footer
+    }
+    
+    /// 装在自定义加载更多功能
+    /// - Parameter footer: 加载更多组件
+    public func setupCustomRefresh(footer:MJRefreshFooter) {
+        footer.refreshingBlock = { [weak self] in
+            guard let self = self else { return }
+            self.footerRefreshSubject.onNext(())
+        }
         mj_footer = footer
     }
     
@@ -142,13 +165,16 @@ extension RxTableView {
         }
         list.asObservable().bind(to: rx.items(dataSource: sectionSource)).disposed(by: disposebag)
         list.subscribe { [unowned self] event in
-            if let models = event.element {
-                models.forEach({
-                    $0.items.forEach({
-                        registerCell(nibName: $0.cellName, style: $0.registerStyle)
-                    })
-                })
+            guard let models = event.element else {
+                mj_header?.state = .idle
+                mj_footer?.state = .idle
+                return
             }
+            models.forEach({
+                $0.items.forEach({
+                    registerCell(nibName: $0.cellName, style: $0.registerStyle)
+                })
+            })
         }.disposed(by: disposebag)
     }
     

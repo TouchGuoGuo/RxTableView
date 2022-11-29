@@ -35,7 +35,6 @@ public struct RxSectionModel {
         }
         self.items = items
     }
-    
 }
 
 extension RxSectionModel : SectionModelType {
@@ -43,11 +42,6 @@ extension RxSectionModel : SectionModelType {
         self = original
         self.items = items
     }
-    
-//    init(original: RxSectionModel, items: [RxSectionType]) {
-//        self = original
-//        self.items = items
-//    }
     public typealias Item = RxSectionType
 }
 
@@ -77,5 +71,11 @@ public struct RxEmptyModel {
     public var image:UIImage?
     /// 空数据图片对于屏幕宽度的占比
     public var ratio:CGFloat = 1
+}
+
+/// 翻页模型
+public struct RxPageModel<T:RxSectionType> {
+    var model:T
+    var page:Int
 }
 

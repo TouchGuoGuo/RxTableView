@@ -96,7 +96,7 @@ open class RxAnimationTableView: UITableView {
 extension RxAnimationTableView {
     
     /// 装载下拉刷新功能
-    func setupHeaderRefresh() {
+    public func setupHeaderRefresh() {
         let header = MJRefreshNormalHeader { [weak self] in
             guard let self = self else { return }
             self.headerRefreshSubject.onNext(())
@@ -111,7 +111,7 @@ extension RxAnimationTableView {
     }
     
     /// 装载加载更多功能
-    func setupFooterRefresh() {
+    public func setupFooterRefresh() {
         let footer = MJRefreshBackNormalFooter { [weak self] in
             guard let self = self else { return }
             self.footerRefreshSubject.onNext(())
