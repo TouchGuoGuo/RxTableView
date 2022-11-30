@@ -71,6 +71,13 @@ public struct RxEmptyModel {
     public var image:UIImage?
     /// 空数据图片对于屏幕宽度的占比
     public var ratio:CGFloat = 1
+    
+    public init(title: NSAttributedString? = nil, description: NSAttributedString? = nil, image: UIImage? = nil, ratio: CGFloat) {
+        self.title = title
+        self.description = description
+        self.image = image
+        self.ratio = ratio
+    }
 }
 
 /// 翻页模型
