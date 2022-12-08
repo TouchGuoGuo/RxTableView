@@ -21,6 +21,8 @@
 		E236C466291A66F600F6EA54 /* DemoCollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */; };
 		E236C46B291A68C500F6EA54 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */; };
 		E236C46C291A68C500F6EA54 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */; };
+		E2AB83D62941E47700BAFE60 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AB83D42941E47700BAFE60 /* DemoCollectionViewCell.swift */; };
+		E2AB83D72941E47700BAFE60 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AB83D52941E47700BAFE60 /* DemoCollectionViewCell.xib */; };
 		E2B2C2CA2930C219007EF40E /* RxAnimationSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */; };
 		E2B2C2CE2930C73E007EF40E /* DemoAnimationTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */; };
 		E2B2C2CF2930C73E007EF40E /* DemoAnimationTableViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */; };
@@ -60,6 +62,8 @@
 		E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewVC.xib; sourceTree = "<group>"; };
 		E236C469291A68C500F6EA54 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
 		E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
+		E2AB83D42941E47700BAFE60 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2AB83D52941E47700BAFE60 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
 		E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationSectionModel.swift; sourceTree = "<group>"; };
 		E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAnimationTableViewVC.swift; sourceTree = "<group>"; };
 		E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoAnimationTableViewVC.xib; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				E2B2C2CB2930C718007EF40E /* AnimationTableView */,
 				E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */,
 				E236C464291A66F600F6EA54 /* DemoCollectionViewVC.xib */,
+				E2AB83D42941E47700BAFE60 /* DemoCollectionViewCell.swift */,
+				E2AB83D52941E47700BAFE60 /* DemoCollectionViewCell.xib */,
 				FF8B7C0A2919FF28002AEBDF /* Main.storyboard */,
 				FF8B7C0D2919FF2C002AEBDF /* Assets.xcassets */,
 				FF8B7C0F2919FF2C002AEBDF /* LaunchScreen.storyboard */,
@@ -280,6 +286,7 @@
 				FF8B7C0C2919FF28002AEBDF /* Main.storyboard in Resources */,
 				E236C46C291A68C500F6EA54 /* DemoTableViewCell.xib in Resources */,
 				E236C462291A59D800F6EA54 /* DemoTableViewVC.xib in Resources */,
+				E2AB83D72941E47700BAFE60 /* DemoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +352,7 @@
 				FF8B7C1B291A038C002AEBDF /* DemoVC.swift in Sources */,
 				E2F792602930B9010074644C /* RxTableView.swift in Sources */,
 				E236C45E291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift in Sources */,
+				E2AB83D62941E47700BAFE60 /* DemoCollectionViewCell.swift in Sources */,
 				E236C461291A59D800F6EA54 /* DemoTableViewVC.swift in Sources */,
 				E236C465291A66F600F6EA54 /* DemoCollectionViewVC.swift in Sources */,
 				E2F792652930BB250074644C /* RxAnimationTableView.swift in Sources */,

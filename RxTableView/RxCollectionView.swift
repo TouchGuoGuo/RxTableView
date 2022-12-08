@@ -13,7 +13,7 @@ import EmptyDataSet_Swift
 import MJRefresh
 import RxGesture
 
-class RxCollectionView: UICollectionView {
+open class RxCollectionView: UICollectionView {
 
     private var disposebag = DisposeBag()
     
@@ -26,20 +26,20 @@ class RxCollectionView: UICollectionView {
     }
         
     /// 空数据标题 （不设置不显示）
-    var emptyModel:RxEmptyModel? {
+    public var emptyModel:RxEmptyModel? {
         didSet {
             setupEmptyView()
         }
     }
         
     /// 绑定数据的数据源 使用方式： tableview.list.accept
-    var list = BehaviorRelay<[RxSectionModel]>(value: [])
+    public var list = BehaviorRelay<[RxSectionModel]>(value: [])
     /// cell中视图点击信号
-    let gestureSubject = PublishSubject<RxGestureModel>()
+    public let gestureSubject = PublishSubject<RxGestureModel>()
     /// 下拉刷新的信号
-    let headerRefreshSubject = PublishSubject<Void>()
+    public let headerRefreshSubject = PublishSubject<Void>()
     /// 加载更多的信号
-    let footerRefreshSubject = PublishSubject<Void>()
+    public let footerRefreshSubject = PublishSubject<Void>()
     
     
     init(layout:UICollectionViewLayout = UICollectionViewLayout()) {
@@ -52,7 +52,7 @@ class RxCollectionView: UICollectionView {
         bindObservable()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         bindObservable()
     }
@@ -99,7 +99,7 @@ extension RxCollectionView {
 extension RxCollectionView {
     
     /// 装载下拉刷新功能
-    func setupHeaderRefresh() {
+    public func setupHeaderRefresh() {
         let header = MJRefreshNormalHeader { [weak self] in
             guard let self = self else { return }
             self.headerRefreshSubject.onNext(())
@@ -114,7 +114,7 @@ extension RxCollectionView {
     }
     
     /// 装载加载更多功能
-    func setupFooterRefresh() {
+    public func setupFooterRefresh() {
         let footer = MJRefreshBackNormalFooter { [weak self] in
             guard let self = self else { return }
             self.footerRefreshSubject.onNext(())
@@ -140,19 +140,19 @@ extension RxCollectionView {
 // MARK: 空数据以及占位图
 extension RxCollectionView : EmptyDataSetSource, EmptyDataSetDelegate {
     
-    func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
+    public func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
         true
     }
     
-    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+    public func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return self.emptyModel?.title
     }
     
-    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+    public func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return self.emptyModel?.description
     }
     
-    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+    public func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
         guard let image = self.emptyModel?.image else { return nil }
         let imageSize = image.size
         let imageRatio = imageSize.height / imageSize.width

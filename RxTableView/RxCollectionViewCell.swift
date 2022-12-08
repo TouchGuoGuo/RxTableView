@@ -7,30 +7,30 @@
 
 import UIKit
 import RxSwift
-class RxCollectionViewCell: UICollectionViewCell {
+open class RxCollectionViewCell: UICollectionViewCell {
     
-    var disposebag = DisposeBag()
+    open var disposebag = DisposeBag()
 
-    override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
         disposebag = DisposeBag()
     }
 
-    override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
         setRx()
     }
     
-    func setUI() {}
+    open func setUI() {}
     
-    func setRx() {}
+    open func setRx() {}
     
-    func setupCellModel(model: Any) {}
+    open func setupCellModel(model: Any) {}
     
-    func setupCellIndexModel(model: Any, indexPath: IndexPath) {}
+    open func setupCellIndexModel(model: Any, indexPath: IndexPath) {}
     
-    func tapGestureViewsForCell() -> [RxGestureModel] {
+    open func tapGestureViewsForCell() -> [RxGestureModel] {
         return []
     }
 
