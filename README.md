@@ -22,7 +22,7 @@
 ```ruby
 use_frameworks!
 target '<Your Target Name>' do
-	pod 'RxTableView+RxCollectionView'
+pod 'RxTableView+RxCollectionView'
 end
 ```
 
@@ -64,15 +64,15 @@ var tableView:RxTableView = RxTableView()
 /// UITableViewCell 继承于 RxTableViewCell
 /// 为cell中的组件赋值
 override func setupCellModel(model:Any) {
-	if let model = model as? RxTableDemoModel {
-		self.title.text = model.title
-	}
+if let model = model as? RxTableDemoModel {
+self.title.text = model.title
+}
 }
 /// 为cell中的组件添加点击事件
 override func tapGestureViewsForCell() -> [RxGestureModel] {
-	return [
-	RxGestureModel(code:"自定义标识",view:title)
-	]
+return [
+RxGestureModel(code:"自定义标识",view:title)
+]
 }
 ```
 
@@ -81,11 +81,11 @@ override func tapGestureViewsForCell() -> [RxGestureModel] {
 ```swift 
 /// 设置数据源
 var models:[RxTableDemoModel] = [
-	RxTableDemoModel(title:"老虎"),
-	RxTableDemoModel(title:"狮子"),
-	RxTableDemoModel(title:"兔子"),
-	RxTableDemoModel(title:"猴子")
-	]
+RxTableDemoModel(title:"老虎"),
+RxTableDemoModel(title:"狮子"),
+RxTableDemoModel(title:"兔子"),
+RxTableDemoModel(title:"猴子")
+]
 /// 创建section
 let section = RxsectionModel(items:models)
 /// 绑定数据
