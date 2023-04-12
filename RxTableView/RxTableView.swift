@@ -165,16 +165,15 @@ extension RxTableView {
         }
         list.asObservable().bind(to: rx.items(dataSource: sectionSource)).disposed(by: disposebag)
         list.subscribe { [unowned self] event in
-            guard let models = event.element else {
+            if let models = event.element {
+                models.forEach({
+                    $0.items.forEach({
+                        registerCell(nibName: $0.cellName, style: $0.registerStyle)
+                    })
+                })
                 mj_header?.state = .idle
                 mj_footer?.state = .idle
-                return
             }
-            models.forEach({
-                $0.items.forEach({
-                    registerCell(nibName: $0.cellName, style: $0.registerStyle)
-                })
-            })
         }.disposed(by: disposebag)
     }
     

@@ -73,6 +73,8 @@ extension RxCollectionView {
                         registerCell(nibName: $0.cellName, style: $0.registerStyle)
                     })
                 })
+                mj_header?.state = .idle
+                mj_footer?.state = .idle
             }
         }.disposed(by: disposebag)
     }
@@ -112,6 +114,16 @@ extension RxCollectionView {
         header.setTitle("已经全部加载完毕", for: MJRefreshState.noMoreData)
         mj_header = header
     }
+    /// 装在自定义下拉刷新功能
+    /// - Parameter header: 下拉刷新组件
+    func setupCustomRefresh(header:MJRefreshHeader) {
+        header.refreshingBlock = { [weak self] in
+            guard let self = self else { return }
+            self.headerRefreshSubject.onNext(())
+        }
+        mj_header = header
+    }
+
     
     /// 装载加载更多功能
     public func setupFooterRefresh() {
@@ -127,6 +139,16 @@ extension RxCollectionView {
         mj_footer = footer
     }
     
+    /// 装在自定义加载更多功能
+    /// - Parameter footer: 加载更多组件
+    func setupCustomRefresh(footer:MJRefreshFooter) {
+        footer.refreshingBlock = { [weak self] in
+            guard let self = self else { return }
+            self.footerRefreshSubject.onNext(())
+        }
+        mj_footer = footer
+    }
+
     /// 装载空数据功能
     private func setupEmptyView() {
         emptyDataSetSource = self
