@@ -30,8 +30,8 @@ open class RxCollectionViewCell: UICollectionViewCell {
     
     open func setupCellIndexModel(model: Any, indexPath: IndexPath) {}
     
-    open func tapGestureViewsForCell() -> [RxGestureModel] {
-        return []
-    }
+//    open func tapGestureViewsForCell() -> [RxGestureModel] {
+//        return []
+//    }
 
 }

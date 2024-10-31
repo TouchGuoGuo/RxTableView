@@ -15,23 +15,23 @@ class DemoTableViewCell: RxTableViewCell {
     
     @IBOutlet weak var title: UILabel!
     
-    var model:DemoTableViewModel?
+//    var model:DemoTableViewModel?
     
-    override func setupCellIndexModel(model: Any, indexPath: IndexPath) {
-        if let model = model as? DemoTableViewModel {
-            self.model = model
-            title.text = model.title + "\(indexPath)"
-        }
-    }
+//    override func setupCellIndexModel(model: Any, indexPath: IndexPath) {
+//        if let model = model as? DemoTableViewModel {
+//            self.model = model
+//            title.text = model.title + "\(indexPath)"
+//        }
+//    }
     
     
-    override func tapGestureViewsForCell() -> [RxGestureModel] {
-        return [
-            RxGestureModel(code: "title",model: nil,view: title),
-            RxGestureModel(code: "yellowView",model: model,view: yellowview),
-            RxGestureModel(code: "pinkview",model: model,view: pinkview),
-        ]
-    }
+//    override func tapGestureViewsForCell() -> [RxGestureModel] {
+//        return [
+//            RxGestureModel(code: "title",model: nil,view: title),
+//            RxGestureModel(code: "yellowView",model: model,view: yellowview),
+//            RxGestureModel(code: "pinkview",model: model,view: pinkview),
+//        ]
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

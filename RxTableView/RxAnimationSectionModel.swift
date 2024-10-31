@@ -2,64 +2,67 @@
 //  RxAnimationSectionModel.swift
 //  RxTableViewDemo
 //
-//  Created by guoguo on 2022/11/25.
+//  Created by yh jl on 2024/10/29.
 //
 
 import Foundation
 import RxDataSources
 
 
+public protocol RxAnimationRowType : IdentifiableType,Equatable {
+    var cell:UIView.Type { get }
+}
+
+extension RxAnimationRowType where Self: IdentifiableType, Self.Identity == UUID {
+    public var identity: UUID { UUID() }
+    static public func == (lhs: Self, rhs: Self) -> Bool {
+        guard lhs.identity == rhs.identity else { return false }
+        return Mirror(reflecting: lhs).children.elementsEqual(
+            Mirror(reflecting: rhs).children,
+            by: { ($0.label, "\($0.value)") == ($1.label, "\($1.value)") }
+        )
+    }
+}
+
+public struct AnyRxAnimationRowType: RxAnimationRowType {
+    let _base: any RxAnimationRowType
+    private let cachedIdentity: UUID
+
+    public var cell: UIView.Type {
+        return _base.cell
+    }
+    
+    public var identity: UUID {
+        return cachedIdentity
+    }
+
+    init(_ base: any RxAnimationRowType) {
+        self._base = base
+        self.cachedIdentity = base.identity as! UUID
+    }
+        
+}
+
+
 public struct RxAnimationSectionModel {
-    
-    var models:[RxAnimationRowModel] = []
-    
+    public var items: [AnyRxAnimationRowType]
+    public var header:String?
+    public var footer:String?
+    public var id:UUID = UUID()
 }
 
-extension RxAnimationSectionModel : AnimatableSectionModelType {
+extension RxAnimationSectionModel: AnimatableSectionModelType {
     
-    public typealias Item = RxAnimationRowModel
+    public typealias Identity = UUID
     
-    public typealias Identity = String
-    
-    public var identity: String {
-        return ""
+    public typealias Item = AnyRxAnimationRowType
+
+    public var identity: UUID {
+        return id
     }
-    public var items: [RxAnimationRowModel] {
-        return models
-    }
-    
-    public init(original: RxAnimationSectionModel, items: [RxAnimationRowModel]) {
+
+    public init(original: RxAnimationSectionModel, items: [AnyRxAnimationRowType]) {
         self = original
-        self.models = items
+        self.items = items
     }
 }
-
-open class RxAnimationRowModel : NSObject , RxSectionType {
-    
-    open var cellName: String {
-        set {}
-        get { "" }
-    }
-    
-    open var registerStyle: RxSectionCellRegisterStyle {
-        set {}
-        get { .nib }
-    }
-    
-    open var index:String
-    
-    init(index: String) {
-        self.index = index
-    }
-}
-
-
-extension RxAnimationRowModel : IdentifiableType  {
-    
-    public typealias Identity = String
-    public var identity: String {
-        return index
-    }
-}
-
-

@@ -9,46 +9,46 @@ import UIKit
 import RxSwift
 import MJRefresh
 
-struct DemoTableViewModel : RxSectionType {
-    var cellName: String = DemoTableViewCell.className
-    var registerStyle: RxSectionCellRegisterStyle = .nib
-    var title:String = ""
-    
-}
+//struct DemoTableViewModel : RxSectionType {
+//    var cellName: String = DemoTableViewCell.className
+//    var registerStyle: RxSectionCellRegisterStyle = .nib
+//    var title:String = ""
+//    
+//}
 
 class DemoTableViewVC: UIViewController {
 
     let disposebag = DisposeBag()
 
-    var source1:[DemoTableViewModel] = [
-        DemoTableViewModel(title:"老虎🐅"),
-        DemoTableViewModel(title:"猴子🐒"),
-        DemoTableViewModel(title:"狮子🦁"),
-        DemoTableViewModel(title:"长颈鹿🦒"),
-        DemoTableViewModel(title:"大象🐘")
-    ]
-    var source2:[DemoTableViewModel] = [
-        DemoTableViewModel(title:"苹果"),
-        DemoTableViewModel(title:"西瓜🍉"),
-        DemoTableViewModel(title:"桃子🍑"),
-        DemoTableViewModel(title:"草莓🍓"),
-        DemoTableViewModel(title:"香蕉🍌")
-    ]
+//    var source1:[DemoTableViewModel] = [
+//        DemoTableViewModel(title:"老虎🐅"),
+//        DemoTableViewModel(title:"猴子🐒"),
+//        DemoTableViewModel(title:"狮子🦁"),
+//        DemoTableViewModel(title:"长颈鹿🦒"),
+//        DemoTableViewModel(title:"大象🐘")
+//    ]
+//    var source2:[DemoTableViewModel] = [
+//        DemoTableViewModel(title:"苹果"),
+//        DemoTableViewModel(title:"西瓜🍉"),
+//        DemoTableViewModel(title:"桃子🍑"),
+//        DemoTableViewModel(title:"草莓🍓"),
+//        DemoTableViewModel(title:"香蕉🍌")
+//    ]
     
-    lazy var sections = [
-        RxSectionModel(items:source1),
-        RxSectionModel(items:source2)
-        ]
+//    lazy var sections = [
+//        RxSectionModel(items:source1),
+//        RxSectionModel(items:source2)
+//        ]
 
     var isEdit:Bool = false
     
-    @IBOutlet weak var tableview: RxTableView! {
-        didSet {
-            tableview.rx.setDelegate(self).disposed(by: disposebag)
-            tableview.setupHeaderRefresh()
-            tableview.setupFooterRefresh()
-        }
-    }
+//    @IBOutlet weak var tableview: RxTableView! {
+//        didSet {
+//            tableview.rx.setDelegate(self).disposed(by: disposebag)
+////            tableview.setupHeaderRefresh()
+////            tableview.setupFooterRefresh()
+//        }
+//    }
     
     
     override func viewDidLoad() {
@@ -58,17 +58,17 @@ class DemoTableViewVC: UIViewController {
         binderSource()
         loadAction()
         
-        tableview.headerRefreshSubject.subscribe { [weak self] _ in
-            guard let self = self else { return }
-            self.tableview.list.accept(self.sections)
-        }.disposed(by: disposebag)
-        
-        tableview.footerRefreshSubject.subscribe { [weak self] _ in
-            guard let self = self else { return }
-            let section = RxSectionModel(items:self.source1)
-            self.sections.append(section)
-            self.tableview.list.accept(self.sections)
-        }.disposed(by: disposebag)
+//        tableview.headerRefreshSubject.subscribe { [weak self] _ in
+//            guard let self = self else { return }
+//            self.tableview.list.accept(self.sections)
+//        }.disposed(by: disposebag)
+//        
+//        tableview.footerRefreshSubject.subscribe { [weak self] _ in
+//            guard let self = self else { return }
+//            let section = RxSectionModel(items:self.source1)
+//            self.sections.append(section)
+//            self.tableview.list.accept(self.sections)
+//        }.disposed(by: disposebag)
         
     }
     
@@ -83,54 +83,53 @@ class DemoTableViewVC: UIViewController {
             guard let self = self else { return }
             self.isEdit = !self.isEdit
             label.text = self.isEdit ? "Exit" : "Edit"
-            self.tableview.allowEdit = self.isEdit
-            self.tableview.reloadData()
+//            self.tableview.allowEdit = self.isEdit
+//            self.tableview.reloadData()
         }.disposed(by: disposebag)
         
     }
     
     func binderSource() {
-        tableview.list.accept(sections)
+//        tableview.list.accept(sections)
     }
     
     func loadAction() {
         
-        tableview.rx.modelSelected(DemoTableViewModel.self).subscribe { [weak self] event in
-            guard let self = self else { return }
-            if let model = event.element {
-                self.showActionAlert(title: "点击行中的model", string: "\(model.title)")
-            }
-        }.disposed(by: disposebag)
-        
-        tableview.rx.itemDeleted.subscribe { [weak self] event in
-            guard let self = self else { return }
-            if let indexPath = event.element {
-                var section = self.sections[indexPath.section]
-                section.items.remove(at: indexPath.row)
-                self.sections[indexPath.section] = section
-                self.binderSource()
-            }
-        }.disposed(by: disposebag)
+//        tableview.rx.modelSelected(DemoTableViewModel.self).subscribe { [weak self] event in
+//            guard let self = self else { return }
+//            if let model = event.element {
+//                self.showActionAlert(title: "点击行中的model", string: "\(model.title)")
+//            }
+//        }.disposed(by: disposebag)
+//        
+//        tableview.rx.itemDeleted.subscribe { [weak self] event in
+//            guard let self = self else { return }
+//            if let indexPath = event.element {
+//                var section = self.sections[indexPath.section]
+//                section.items.remove(at: indexPath.row)
+//                self.sections[indexPath.section] = section
+//                self.binderSource()
+//            }
+//        }.disposed(by: disposebag)
         
         /// 移动cell事件的实现
 //        tableview.rx.itemMoved.subscribe { [weak self] event in
 ////            event.element?.sourceIndex
 //        }.disposed(by: disposebag)
         
-        tableview.gestureSubject.subscribe { [weak self] event in
-            guard let self = self else { return }
-            if let element = event.element {
-                let indexPath = element.indexPath
-                let model = element.model
-                self.showActionAlert(title: "点击cell中的组件", string: "code:-\(model.code)-model:\(model.model.debugDescription)--选中的行\(indexPath)")
-            }
-        }.disposed(by: disposebag)
+//        tableview.gestureSubject.subscribe { [weak self] event in
+//            guard let self = self else { return }
+//            if let element = event.element {
+//                let indexPath = element.indexPath
+//                let model = element.model
+//                self.showActionAlert(title: "点击cell中的组件", string: "code:-\(model.code)-model:\(model.model.debugDescription)--选中的行\(indexPath)")
+//            }
+//        }.disposed(by: disposebag)
         
         
     }
     
     func showActionAlert(title:String,string:String) {
-        
         let alert = UIAlertController(title: title, message: string, preferredStyle: .alert)
         let action = UIAlertAction(title: "Done", style: .default)
         alert.addAction(action)

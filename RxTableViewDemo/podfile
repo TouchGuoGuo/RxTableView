@@ -5,6 +5,6 @@ target 'RxTableViewDemo' do
 pod 'RxSwift'
 pod 'RxDataSources'
 pod 'MJRefresh'
-pod 'EmptyDataSet-Swift'
 pod 'RxGesture'
+pod 'SnapKit'
 end

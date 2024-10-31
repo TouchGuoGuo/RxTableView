@@ -9,50 +9,50 @@ import UIKit
 import RxSwift
 
 
-class DemoAnimationCellModel : RxAnimationRowModel {
-    override var cellName: String {
-        get { return DemoAnimationTableViewCell.className }
-        set {}
-    }
-    override var registerStyle: RxSectionCellRegisterStyle {
-        get { return .nib }
-        set { }
-    }
-    var show:Bool = false
-}
+//class DemoAnimationCellModel : RxAnimationRowModel {
+//    override var cellName: String {
+//        get { return DemoAnimationTableViewCell.className }
+//        set {}
+//    }
+//    override var registerStyle: RxSectionCellRegisterStyle {
+//        get { return .nib }
+//        set { }
+//    }
+//    var show:Bool = false
+//}
 
 class DemoAnimationTableViewVC: UIViewController {
 
     
     var disposebag = DisposeBag()
     
-    lazy var models:[RxAnimationRowModel] = [
-        DemoAnimationCellModel(index: "0"),
-        DemoAnimationCellModel(index: "1"),
-        DemoAnimationCellModel(index: "2"),
-        DemoAnimationCellModel(index: "3"),
-        DemoAnimationCellModel(index: "4")
-    ]
+//    lazy var models:[RxAnimationRowModel] = [
+//        DemoAnimationCellModel(index: "0"),
+//        DemoAnimationCellModel(index: "1"),
+//        DemoAnimationCellModel(index: "2"),
+//        DemoAnimationCellModel(index: "3"),
+//        DemoAnimationCellModel(index: "4")
+//    ]
+//    
+//    lazy var sections:[RxAnimationSectionModel] = [RxAnimationSectionModel(models: models)]
     
-    lazy var sections:[RxAnimationSectionModel] = [RxAnimationSectionModel(models: models)]
-    
-    @IBOutlet weak var tableview: RxAnimationTableView!
+//    @IBOutlet weak var tableview: RxAnimationTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableview.list.accept(sections)
+//        self.tableview.list.accept(sections)
 
 
-        tableview.rx.itemSelected.subscribe { [weak self] event in
-            guard let self = self else { return }
-            if let indexPath = event.element {
-                if let model = self.sections[indexPath.section].models[indexPath.row] as? DemoAnimationCellModel {
-                    model.show = !model.show
-                    self.tableview.reloadRows(at: [indexPath], with: .automatic)
-                }
-            }
-        }.disposed(by: disposebag)
+//        tableview.rx.itemSelected.subscribe { [weak self] event in
+//            guard let self = self else { return }
+//            if let indexPath = event.element {
+//                if let model = self.sections[indexPath.section].models[indexPath.row] as? DemoAnimationCellModel {
+//                    model.show = !model.show
+//                    self.tableview.reloadRows(at: [indexPath], with: .automatic)
+//                }
+//            }
+//        }.disposed(by: disposebag)
         
         // Do any additional setup after loading the view.
     }

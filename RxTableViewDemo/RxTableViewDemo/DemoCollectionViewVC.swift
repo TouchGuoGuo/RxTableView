@@ -8,10 +8,10 @@
 import UIKit
 
 
-struct DemoCollectionCellModel : RxSectionType {
-    var cellName: String = DemoCollectionViewCell.className
-    var registerStyle: RxSectionCellRegisterStyle = .nib
-}
+//struct DemoCollectionCellModel : RxSectionType {
+//    var cellName: String = DemoCollectionViewCell.className
+//    var registerStyle: RxSectionCellRegisterStyle = .nib
+//}
 
 class DemoCollectionViewVC: UIViewController {
 
@@ -30,9 +30,9 @@ class DemoCollectionViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let model = DemoCollectionCellModel()
-        let section = RxSectionModel(items: [model,model,model,model,model,model,model])
-        collectionview.list.accept([section])
+//        let model = DemoCollectionCellModel()
+//        let section = RxSectionModel(items: [model,model,model,model,model,model,model])
+//        collectionview.list.accept([section])
         
         // Do any additional setup after loading the view.
     }

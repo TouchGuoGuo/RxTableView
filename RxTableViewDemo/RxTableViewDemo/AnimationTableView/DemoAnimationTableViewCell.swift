@@ -22,17 +22,17 @@ class DemoAnimationTableViewCell: RxTableViewCell {
     }
     
 
-    override func setupCellModel(model: Any) {
-        if let model = model as? DemoAnimationCellModel {
-            contentHeight.constant = model.show ? 100 : 200
-        }
+//    override func setupCellModel(model: Any) {
+//        if let model = model as? DemoAnimationCellModel {
+//            contentHeight.constant = model.show ? 100 : 200
+//        }
 //        if let row = model as? RxAnimationRowModel,let model = row.model as? DemoAnimationCellModel {
 //            print("打印的是否展示--\(model.show ? 200 : 120)--\(row)")
 //
 //            contentBackView.layoutIfNeeded()
 //        }
 
-    }
+//    }
     
 //    override func tapGestureViewsForCell() -> [RxGestureModel] {
 //        return [RxGestureModel(code: "moreImage",view: moreImage)]

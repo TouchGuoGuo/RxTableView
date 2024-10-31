@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E236C450291A4E3600F6EA54 /* DemoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C44E291A4E3600F6EA54 /* DemoListCell.swift */; };
-		E236C451291A4E3600F6EA54 /* DemoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C44F291A4E3600F6EA54 /* DemoListCell.xib */; };
+		5997D0FC2CD0C71D0088BAF4 /* RxAnimationSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D0FB2CD0C71D0088BAF4 /* RxAnimationSectionModel.swift */; };
+		5997D0FE2CD0C7F00088BAF4 /* RxAnimationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D0FD2CD0C7F00088BAF4 /* RxAnimationTableView.swift */; };
+		5997D1002CD0CF6C0088BAF4 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D0FF2CD0CF6C0088BAF4 /* UITableView+Extension.swift */; };
+		5997D1022CD0DE310088BAF4 /* BehaviorRelay+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D1012CD0DE310088BAF4 /* BehaviorRelay+Extension.swift */; };
+		5997D1052CD0E1ED0088BAF4 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D1042CD0E1ED0088BAF4 /* BaseVC.swift */; };
+		5997D1072CD0E23B0088BAF4 /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D1062CD0E23B0088BAF4 /* RxTableViewController.swift */; };
+		5997D10B2CD21A430088BAF4 /* RxTableViewController+InsertSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D10A2CD21A430088BAF4 /* RxTableViewController+InsertSection.swift */; };
+		5997D10D2CD2231E0088BAF4 /* RxTableViewController+InsertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D10C2CD2231D0088BAF4 /* RxTableViewController+InsertRow.swift */; };
+		5997D10F2CD231140088BAF4 /* RxTableViewController+Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D10E2CD231140088BAF4 /* RxTableViewController+Edit.swift */; };
+		5997D1112CD3561A0088BAF4 /* RxTableViewController+Mixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997D1102CD3561A0088BAF4 /* RxTableViewController+Mixed.swift */; };
 		E236C459291A4F2E00F6EA54 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C453291A4F2E00F6EA54 /* UIFont+Extension.swift */; };
 		E236C45A291A4F2E00F6EA54 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C454291A4F2E00F6EA54 /* UIColor+Extension.swift */; };
 		E236C45B291A4F2E00F6EA54 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C455291A4F2E00F6EA54 /* NSObject+Extension.swift */; };
-		E236C45C291A4F2E00F6EA54 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C456291A4F2E00F6EA54 /* UIView+Extension.swift */; };
-		E236C45D291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C457291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift */; };
-		E236C45E291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C458291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift */; };
 		E236C461291A59D800F6EA54 /* DemoTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C45F291A59D800F6EA54 /* DemoTableViewVC.swift */; };
 		E236C462291A59D800F6EA54 /* DemoTableViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C460291A59D800F6EA54 /* DemoTableViewVC.xib */; };
 		E236C465291A66F600F6EA54 /* DemoCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */; };
@@ -23,7 +28,6 @@
 		E236C46C291A68C500F6EA54 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */; };
 		E2AB83D62941E47700BAFE60 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AB83D42941E47700BAFE60 /* DemoCollectionViewCell.swift */; };
 		E2AB83D72941E47700BAFE60 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AB83D52941E47700BAFE60 /* DemoCollectionViewCell.xib */; };
-		E2B2C2CA2930C219007EF40E /* RxAnimationSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */; };
 		E2B2C2CE2930C73E007EF40E /* DemoAnimationTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */; };
 		E2B2C2CF2930C73E007EF40E /* DemoAnimationTableViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */; };
 		E2B2C2D22930D4E7007EF40E /* DemoAnimationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B2C2D02930D4E7007EF40E /* DemoAnimationTableViewCell.xib */; };
@@ -33,7 +37,6 @@
 		E2F792612930B9010074644C /* RxSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925C2930B9010074644C /* RxSectionModel.swift */; };
 		E2F792622930B9010074644C /* RxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925D2930B9010074644C /* RxCollectionViewCell.swift */; };
 		E2F792632930B9010074644C /* RxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7925E2930B9010074644C /* RxTableViewCell.swift */; };
-		E2F792652930BB250074644C /* RxAnimationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F792642930BB250074644C /* RxAnimationTableView.swift */; };
 		E7206D1726A4670004149B8A /* Pods_RxTableViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABC80966F6A4AD4D8DD9634 /* Pods_RxTableViewDemo.framework */; };
 		FF8B7C052919FF28002AEBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C042919FF28002AEBDF /* AppDelegate.swift */; };
 		FF8B7C092919FF28002AEBDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C082919FF28002AEBDF /* ViewController.swift */; };
@@ -41,21 +44,25 @@
 		FF8B7C0E2919FF2C002AEBDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8B7C0D2919FF2C002AEBDF /* Assets.xcassets */; };
 		FF8B7C112919FF2C002AEBDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8B7C0F2919FF2C002AEBDF /* LaunchScreen.storyboard */; };
 		FF8B7C192919FF95002AEBDF /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = FF8B7C182919FF95002AEBDF /* podfile */; };
-		FF8B7C1B291A038C002AEBDF /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B7C1A291A038C002AEBDF /* DemoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42F324CA54C7703C8BB63237 /* Pods-RxTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTableViewDemo.release.xcconfig"; path = "Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5997D0FB2CD0C71D0088BAF4 /* RxAnimationSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationSectionModel.swift; sourceTree = "<group>"; };
+		5997D0FD2CD0C7F00088BAF4 /* RxAnimationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationTableView.swift; sourceTree = "<group>"; };
+		5997D0FF2CD0CF6C0088BAF4 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		5997D1012CD0DE310088BAF4 /* BehaviorRelay+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+Extension.swift"; sourceTree = "<group>"; };
+		5997D1042CD0E1ED0088BAF4 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		5997D1062CD0E23B0088BAF4 /* RxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
+		5997D10A2CD21A430088BAF4 /* RxTableViewController+InsertSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxTableViewController+InsertSection.swift"; sourceTree = "<group>"; };
+		5997D10C2CD2231D0088BAF4 /* RxTableViewController+InsertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxTableViewController+InsertRow.swift"; sourceTree = "<group>"; };
+		5997D10E2CD231140088BAF4 /* RxTableViewController+Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxTableViewController+Edit.swift"; sourceTree = "<group>"; };
+		5997D1102CD3561A0088BAF4 /* RxTableViewController+Mixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxTableViewController+Mixed.swift"; sourceTree = "<group>"; };
 		5ABC80966F6A4AD4D8DD9634 /* Pods_RxTableViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTableViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6598091A937AFB8A09DA104B /* Pods-RxTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTableViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-RxTableViewDemo/Pods-RxTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		E236C44E291A4E3600F6EA54 /* DemoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListCell.swift; sourceTree = "<group>"; };
-		E236C44F291A4E3600F6EA54 /* DemoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoListCell.xib; sourceTree = "<group>"; };
 		E236C453291A4F2E00F6EA54 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		E236C454291A4F2E00F6EA54 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E236C455291A4F2E00F6EA54 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
-		E236C456291A4F2E00F6EA54 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		E236C457291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
-		E236C458291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftEntryKit.swift"; sourceTree = "<group>"; };
 		E236C45F291A59D800F6EA54 /* DemoTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewVC.swift; sourceTree = "<group>"; };
 		E236C460291A59D800F6EA54 /* DemoTableViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewVC.xib; sourceTree = "<group>"; };
 		E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewVC.swift; sourceTree = "<group>"; };
@@ -64,7 +71,6 @@
 		E236C46A291A68C500F6EA54 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
 		E2AB83D42941E47700BAFE60 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E2AB83D52941E47700BAFE60 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
-		E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationSectionModel.swift; sourceTree = "<group>"; };
 		E2B2C2CC2930C73E007EF40E /* DemoAnimationTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAnimationTableViewVC.swift; sourceTree = "<group>"; };
 		E2B2C2CD2930C73E007EF40E /* DemoAnimationTableViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoAnimationTableViewVC.xib; sourceTree = "<group>"; };
 		E2B2C2D02930D4E7007EF40E /* DemoAnimationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoAnimationTableViewCell.xib; sourceTree = "<group>"; };
@@ -74,7 +80,6 @@
 		E2F7925C2930B9010074644C /* RxSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSectionModel.swift; sourceTree = "<group>"; };
 		E2F7925D2930B9010074644C /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
 		E2F7925E2930B9010074644C /* RxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewCell.swift; sourceTree = "<group>"; };
-		E2F792642930BB250074644C /* RxAnimationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAnimationTableView.swift; sourceTree = "<group>"; };
 		FF8B7C012919FF28002AEBDF /* RxTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8B7C042919FF28002AEBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8B7C082919FF28002AEBDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +88,6 @@
 		FF8B7C102919FF2C002AEBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF8B7C122919FF2C002AEBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF8B7C182919FF95002AEBDF /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FF8B7C1A291A038C002AEBDF /* DemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5997D1032CD0E1D50088BAF4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5997D1042CD0E1ED0088BAF4 /* BaseVC.swift */,
+				5997D1062CD0E23B0088BAF4 /* RxTableViewController.swift */,
+				5997D10A2CD21A430088BAF4 /* RxTableViewController+InsertSection.swift */,
+				5997D10C2CD2231D0088BAF4 /* RxTableViewController+InsertRow.swift */,
+				5997D10E2CD231140088BAF4 /* RxTableViewController+Edit.swift */,
+				5997D1102CD3561A0088BAF4 /* RxTableViewController+Mixed.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		9EE70DC811587E201F46EA54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,21 +138,8 @@
 				E236C453291A4F2E00F6EA54 /* UIFont+Extension.swift */,
 				E236C454291A4F2E00F6EA54 /* UIColor+Extension.swift */,
 				E236C455291A4F2E00F6EA54 /* NSObject+Extension.swift */,
-				E236C456291A4F2E00F6EA54 /* UIView+Extension.swift */,
-				E236C457291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift */,
-				E236C458291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		E236C467291A68A100F6EA54 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				FF8B7C1A291A038C002AEBDF /* DemoVC.swift */,
-				E236C44E291A4E3600F6EA54 /* DemoListCell.swift */,
-				E236C44F291A4E3600F6EA54 /* DemoListCell.xib */,
-			);
-			path = List;
 			sourceTree = "<group>";
 		};
 		E236C468291A68AD00F6EA54 /* TableView */ = {
@@ -165,11 +169,13 @@
 			children = (
 				E2F7925A2930B9010074644C /* RxCollectionView.swift */,
 				E2F7925B2930B9010074644C /* RxTableView.swift */,
-				E2F792642930BB250074644C /* RxAnimationTableView.swift */,
+				5997D0FD2CD0C7F00088BAF4 /* RxAnimationTableView.swift */,
 				E2F7925C2930B9010074644C /* RxSectionModel.swift */,
-				E2B2C2C92930C219007EF40E /* RxAnimationSectionModel.swift */,
+				5997D0FB2CD0C71D0088BAF4 /* RxAnimationSectionModel.swift */,
 				E2F7925D2930B9010074644C /* RxCollectionViewCell.swift */,
 				E2F7925E2930B9010074644C /* RxTableViewCell.swift */,
+				5997D0FF2CD0CF6C0088BAF4 /* UITableView+Extension.swift */,
+				5997D1012CD0DE310088BAF4 /* BehaviorRelay+Extension.swift */,
 			);
 			name = RxTableView;
 			path = ../../RxTableView;
@@ -201,7 +207,7 @@
 				E236C452291A4F2E00F6EA54 /* Extension */,
 				FF8B7C042919FF28002AEBDF /* AppDelegate.swift */,
 				FF8B7C082919FF28002AEBDF /* ViewController.swift */,
-				E236C467291A68A100F6EA54 /* List */,
+				5997D1032CD0E1D50088BAF4 /* VC */,
 				E236C468291A68AD00F6EA54 /* TableView */,
 				E2B2C2CB2930C718007EF40E /* AnimationTableView */,
 				E236C463291A66F600F6EA54 /* DemoCollectionViewVC.swift */,
@@ -280,7 +286,6 @@
 				FF8B7C112919FF2C002AEBDF /* LaunchScreen.storyboard in Resources */,
 				E236C466291A66F600F6EA54 /* DemoCollectionViewVC.xib in Resources */,
 				E2B2C2D22930D4E7007EF40E /* DemoAnimationTableViewCell.xib in Resources */,
-				E236C451291A4E3600F6EA54 /* DemoListCell.xib in Resources */,
 				FF8B7C0E2919FF2C002AEBDF /* Assets.xcassets in Resources */,
 				FF8B7C192919FF95002AEBDF /* podfile in Resources */,
 				FF8B7C0C2919FF28002AEBDF /* Main.storyboard in Resources */,
@@ -340,27 +345,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8B7C092919FF28002AEBDF /* ViewController.swift in Sources */,
+				5997D10D2CD2231E0088BAF4 /* RxTableViewController+InsertRow.swift in Sources */,
 				E2B2C2D32930D4E7007EF40E /* DemoAnimationTableViewCell.swift in Sources */,
+				5997D1002CD0CF6C0088BAF4 /* UITableView+Extension.swift in Sources */,
 				FF8B7C052919FF28002AEBDF /* AppDelegate.swift in Sources */,
-				E236C45C291A4F2E00F6EA54 /* UIView+Extension.swift in Sources */,
+				5997D1112CD3561A0088BAF4 /* RxTableViewController+Mixed.swift in Sources */,
 				E2B2C2CE2930C73E007EF40E /* DemoAnimationTableViewVC.swift in Sources */,
-				E236C45D291A4F2E00F6EA54 /* NSLayoutConstraint+Extension.swift in Sources */,
-				E236C450291A4E3600F6EA54 /* DemoListCell.swift in Sources */,
+				5997D1022CD0DE310088BAF4 /* BehaviorRelay+Extension.swift in Sources */,
 				E236C45A291A4F2E00F6EA54 /* UIColor+Extension.swift in Sources */,
 				E236C459291A4F2E00F6EA54 /* UIFont+Extension.swift in Sources */,
 				E2F792632930B9010074644C /* RxTableViewCell.swift in Sources */,
-				FF8B7C1B291A038C002AEBDF /* DemoVC.swift in Sources */,
 				E2F792602930B9010074644C /* RxTableView.swift in Sources */,
-				E236C45E291A4F2E00F6EA54 /* UIViewController+SwiftEntryKit.swift in Sources */,
 				E2AB83D62941E47700BAFE60 /* DemoCollectionViewCell.swift in Sources */,
 				E236C461291A59D800F6EA54 /* DemoTableViewVC.swift in Sources */,
 				E236C465291A66F600F6EA54 /* DemoCollectionViewVC.swift in Sources */,
-				E2F792652930BB250074644C /* RxAnimationTableView.swift in Sources */,
+				5997D10B2CD21A430088BAF4 /* RxTableViewController+InsertSection.swift in Sources */,
+				5997D10F2CD231140088BAF4 /* RxTableViewController+Edit.swift in Sources */,
 				E236C46B291A68C500F6EA54 /* DemoTableViewCell.swift in Sources */,
 				E2F7925F2930B9010074644C /* RxCollectionView.swift in Sources */,
-				E2B2C2CA2930C219007EF40E /* RxAnimationSectionModel.swift in Sources */,
 				E2F792622930B9010074644C /* RxCollectionViewCell.swift in Sources */,
+				5997D0FC2CD0C71D0088BAF4 /* RxAnimationSectionModel.swift in Sources */,
 				E236C45B291A4F2E00F6EA54 /* NSObject+Extension.swift in Sources */,
+				5997D0FE2CD0C7F00088BAF4 /* RxAnimationTableView.swift in Sources */,
+				5997D1072CD0E23B0088BAF4 /* RxTableViewController.swift in Sources */,
+				5997D1052CD0E1ED0088BAF4 /* BaseVC.swift in Sources */,
 				E2F792612930B9010074644C /* RxSectionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -493,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

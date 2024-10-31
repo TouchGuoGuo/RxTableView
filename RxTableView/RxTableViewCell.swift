@@ -10,8 +10,10 @@ import RxSwift
 
 open class RxTableViewCell: UITableViewCell {
 
-    open var disposebag = DisposeBag()
-
+    private var disposebag = DisposeBag()
+        
+    public private(set) var indexPath:IndexPath?
+    
     open override func prepareForReuse() {
         super.prepareForReuse()
         disposebag = DisposeBag()
@@ -27,13 +29,13 @@ open class RxTableViewCell: UITableViewCell {
     
     open func setRx() {}
     
-    open func setupCellModel(model: Any) {}
-    
-    open func setupCellIndexModel(model: Any, indexPath: IndexPath) {}
-    
-    open func tapGestureViewsForCell() -> [RxGestureModel] {
-        return []
+    open func setupCellIndexModel(model: Any, indexPath: IndexPath) {
+        self.indexPath = indexPath
     }
+    
+//    open func tapGestureViewsForCell() -> [RxGestureModel] {
+//        return []
+//    }
 
 
     open override func setSelected(_ selected: Bool, animated: Bool) {
