@@ -13,20 +13,19 @@ class RxTableViewController_Mixed: BaseVC {
         super.viewDidLoad()
         
         sections = sections.map({ item in
-            let types = [RxTableViewControllerCell.self,RxTableViewCustomStyleCell.self]
             let element = item.items.map { model in
                 var new = model as? RxTableViewControllerModel
-                new?.cell = types.randomElement() ?? RxTableViewCustomStyleCell.self
+                new?.title = "点我改变样式"
                 return new!
             }
             return RxSectionModel(items: element)
         })
         
         animationSections = animationSections.map({ item in
-            let types = [RxTableViewControllerCell.self,RxTableViewCustomStyleCell.self]
             let element = item.items.map { model in
                 var new = model._base as? RxTableViewControllerModel
-                new?.cell = types.randomElement() ?? RxTableViewCustomStyleCell.self
+                new?.title = "点我改变样式"
+                
                 return AnyRxAnimationRowType(new!)
             }
             return RxAnimationSectionModel(items: element)
@@ -35,6 +34,36 @@ class RxTableViewController_Mixed: BaseVC {
         tableview.list.accept(sections)
         animationTableView.list.accept(animationSections)
         
+        tableview.rx.itemSelected.bind { [weak self] event in
+            guard let self = self else { return }
+            let indexPath = event
+            var new = self.tableview.list.value[indexPath.section].items[indexPath.row]
+            self.tableview.list.updateItems(inSection: indexPath.section) { rows in
+                if (new.cell == RxTableViewControllerCell.self) {
+                    new.cell = RxTableViewCustomStyleCell.self
+                } else {
+                    new.cell = RxTableViewControllerCell.self
+                }
+                rows[indexPath.row] = new
+            }
+        }.disposed(by: disposebag)
+        
+        
+        animationTableView.rx.itemSelected.bind { [weak self] event in
+            guard let self = self else { return }
+            let indexPath = event
+            animationTableView.deselectRow(at: indexPath, animated: true)
+            var new = self.animationTableView.list.value[indexPath.section].items[indexPath.row]
+            self.animationTableView.list.updateItems(inSection: indexPath.section) { rows in
+                if (new._base.cell == RxTableViewControllerCell.self) {
+                    new._base.cell = RxTableViewCustomStyleCell.self
+                } else {
+                    new._base.cell = RxTableViewControllerCell.self
+                }
+                rows[indexPath.row] = new
+            }
+        }.disposed(by: disposebag)
+
 
         // Do any additional setup after loading the view.
     }

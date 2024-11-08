@@ -98,17 +98,37 @@ class BaseVC: UIViewController {
             RxTableViewControllerModel(title:"猴子🐒"),
             RxTableViewControllerModel(title:"狮子🦁"),
             RxTableViewControllerModel(title:"长颈鹿🦒"),
-            RxTableViewControllerModel(title:"大象🐘")
+            RxTableViewControllerModel(title:"大象🐘"),
+            RxTableViewControllerModel(title:"狗🐶"),
+            RxTableViewControllerModel(title:"猫🐱"),
+            RxTableViewControllerModel(title:"鸟🐦"),
+            RxTableViewControllerModel(title:"熊🐻"),
+            RxTableViewControllerModel(title:"熊猫🐼"),
+            RxTableViewControllerModel(title:"老鼠🐭"),
+            RxTableViewControllerModel(title:"企鹅🐧"),
+            RxTableViewControllerModel(title:"绵阳🐑"),
+            RxTableViewControllerModel(title:"狐狸🦊"),
+            RxTableViewControllerModel(title:"袋鼠🦘"),
         ],header: "动物"),
         RxSectionModel(items: [
             RxTableViewControllerModel(title:"梨🍐"),
             RxTableViewControllerModel(title:"西瓜🍉"),
             RxTableViewControllerModel(title:"桃子🍑"),
             RxTableViewControllerModel(title:"草莓🍓"),
-            RxTableViewControllerModel(title:"香蕉🍌")
+            RxTableViewControllerModel(title:"香蕉🍌"),
+            RxTableViewControllerModel(title:"苹果🍎"),
+            RxTableViewControllerModel(title:"青苹果🍏"),
+            RxTableViewControllerModel(title:"菠萝🍍"),
+            RxTableViewControllerModel(title:"柠檬🍋"),
+            RxTableViewControllerModel(title:"葡萄🍇"),
+            RxTableViewControllerModel(title:"西红柿🍅"),
+            RxTableViewControllerModel(title:"奇异果🥝"),
+            RxTableViewControllerModel(title:"橘子🍊"),
+            RxTableViewControllerModel(title:"芒果🥭"),
+            RxTableViewControllerModel(title:"椰子🥥"),
+            RxTableViewControllerModel(title:"樱桃🍒"),
         ],header: "水果")
     ]
-    
     
     lazy var animationSections:[RxAnimationSectionModel] = [
         RxAnimationSectionModel(items: [
@@ -116,18 +136,39 @@ class BaseVC: UIViewController {
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"猴子🐒")),
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"狮子🦁")),
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"长颈鹿🦒")),
-            AnyRxAnimationRowType(RxTableViewControllerModel(title:"大象🐘"))
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"大象🐘")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"狗🐶")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"猫🐱")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"鸟🐦")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"熊🐻")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"熊猫🐼")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"老鼠🐭")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"企鹅🐧")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"绵阳🐑")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"狐狸🦊")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"袋鼠🦘")),
+
         ],header: "动物",id:UUID()),
         RxAnimationSectionModel(items: [
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"梨🍐")),
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"西瓜🍉")),
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"桃子🍑")),
             AnyRxAnimationRowType(RxTableViewControllerModel(title:"草莓🍓")),
-            AnyRxAnimationRowType(RxTableViewControllerModel(title:"香蕉🍌"))
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"香蕉🍌")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"苹果🍎")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"青苹果🍏")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"菠萝🍍")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"柠檬🍋")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"葡萄🍇")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"西红柿🍅")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"奇异果🥝")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"橘子🍊")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"芒果🥭")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"椰子🥥")),
+            AnyRxAnimationRowType(RxTableViewControllerModel(title:"樱桃🍒")),
         ],header: "水果",id: UUID())
     ]
 
-    
     private lazy var onSwitch:UISwitch = {
        let view = UISwitch()
         return view

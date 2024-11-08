@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,10 +31,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDG-1K-gZQ">
                                 <rect key="frame" x="270" y="10" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hDG-1K-gZQ" secondAttribute="height" id="p28-tD-dd2"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9As-TZ-Ae8">
                                 <rect key="frame" x="80" y="0.0" width="160" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="60" id="Z0b-Cq-4rV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,8 +56,7 @@
                             <constraint firstItem="hDG-1K-gZQ" firstAttribute="leading" secondItem="9As-TZ-Ae8" secondAttribute="trailing" constant="30" id="c4P-BM-iZM"/>
                             <constraint firstItem="hDG-1K-gZQ" firstAttribute="top" secondItem="ILG-zb-WW2" secondAttribute="top" constant="10" id="ftd-zi-uGG"/>
                             <constraint firstAttribute="trailing" secondItem="hDG-1K-gZQ" secondAttribute="trailing" constant="10" id="hg8-9q-DK4"/>
-                            <constraint firstAttribute="height" constant="60" id="nSe-mP-OrX"/>
-                            <constraint firstItem="hDG-1K-gZQ" firstAttribute="width" secondItem="hDG-1K-gZQ" secondAttribute="height" id="p28-tD-dd2"/>
+                            <constraint firstAttribute="height" priority="999" constant="60" id="nSe-mP-OrX"/>
                             <constraint firstItem="a9h-yq-gl8" firstAttribute="leading" secondItem="ILG-zb-WW2" secondAttribute="leading" constant="10" id="qCl-go-TaE"/>
                             <constraint firstAttribute="bottom" secondItem="9As-TZ-Ae8" secondAttribute="bottom" id="qRY-ug-EsT"/>
                         </constraints>

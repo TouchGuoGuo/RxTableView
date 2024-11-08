@@ -12,10 +12,8 @@ import RxDataSources
 /// 通过Rx实现tableView或者collectionview的基础协议
 public protocol RxRowType {
     /// cell
-    var cell:UIView.Type { get }
-    
+    var cell:UIView.Type { get set }
 }
-
 
 /// UITableView/UICollectionview的数据模型
 public struct RxSectionModel {
@@ -23,7 +21,6 @@ public struct RxSectionModel {
     public var items:[RxRowType]
     public var header:String?
     public var footer:String?
-    
 }
 
 extension RxSectionModel : SectionModelType {

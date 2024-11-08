@@ -9,7 +9,6 @@ import UIKit
 import RxSwift
 import RxRelay
 import RxDataSources
-import MJRefresh
 import RxGesture
 
 public enum RxTableViewIndexTitles {
@@ -30,6 +29,12 @@ open class RxTableView : UITableView {
         let identifier = String(describing: element.cell)
         guard let cell = tableview.dequeueReusableCell(withIdentifier: identifier) as? RxTableViewCell else { return UITableViewCell() }
         cell.setupCellIndexModel(model: element, indexPath: indexPath)
+        cell.gestureModels.forEach { item in
+            item.view.rx.tapGesture().when(.recognized)
+                .map({ _ in item })
+                .bind(to: self.gesture)
+                .disposed(by: cell.disposebag)
+        }
         return cell
     } titleForHeaderInSection: { dataSource, index in
         return dataSource.sectionModels[index].header
@@ -53,15 +58,27 @@ open class RxTableView : UITableView {
         case .custom(let items):
             return items
         }
-    } sectionForSectionIndexTitle: { dataSource, title, index in
+    } sectionForSectionIndexTitle: { [weak self] dataSource, title, index in
+        guard let self = self else { return index }
+        self.indexTitlesGesture.onNext((title,index))
         return index
     }
         
     /// 绑定数据的数据源
     public var list = BehaviorRelay<[RxSectionModel]>(value: [])
     
+    /// cell中的点击事件模型
+    public var gesture = PublishSubject<RxCellGestureModel>()
+    
     /// indexTitles类型 根据数据源自动设置 也可以使用custom自定义
-    public var indexTitlesType:RxTableViewIndexTitles = .none
+    public var indexTitlesType:RxTableViewIndexTitles = .none {
+        didSet {
+            reloadSectionIndexTitles()
+        }
+    }
+    
+    /// 索引的点击事件
+    public var indexTitlesGesture = PublishSubject<(String,Int)>()
     
     /// 允许编辑
     var allowEdit:Bool = false

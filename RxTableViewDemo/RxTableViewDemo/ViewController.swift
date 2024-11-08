@@ -7,7 +7,7 @@
 
 import UIKit
 import RxSwift
-
+import RxGesture
 
 struct ChapterModel : RxRowType,RxAnimationRowType {
     
@@ -35,7 +35,10 @@ class ViewController: UIViewController {
         ChapterModel(title: "插入section"),
         ChapterModel(title: "插入row"),
         ChapterModel(title: "编辑"),
-        ChapterModel(title: "混合cell样式")
+        ChapterModel(title: "混合cell样式"),
+        ChapterModel(title: "xib"),
+        ChapterModel(title: "cell中的组件点击"),
+        ChapterModel(title: "索引")
     ]
     
     private let tableView:RxTableView = RxTableView(style: .grouped)
@@ -72,6 +75,15 @@ class ViewController: UIViewController {
                 self.show(vc, sender: self)
             case "混合cell样式":
                 let vc = RxTableViewController_Mixed()
+                self.show(vc, sender: self)
+            case "xib":
+                let vc = RxTableViewControllerXib()
+                self.show(vc, sender: self)
+            case "cell中的组件点击":
+                let vc = RxTableViewControllerCellTap()
+                self.show(vc, sender: self)
+            case "索引":
+                let vc = RxTableViewController_IndexTitles()
                 self.show(vc, sender: self)
             default:
                 break

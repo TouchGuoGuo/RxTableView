@@ -9,8 +9,6 @@ import UIKit
 import RxSwift
 import RxRelay
 import RxDataSources
-import MJRefresh
-import RxGesture
 
 open class RxCollectionView: UICollectionView {
 

@@ -8,11 +8,17 @@
 import UIKit
 import RxSwift
 
-open class RxTableViewCell: UITableViewCell {
+open class RxTableViewCell: UITableViewCell ,RxCellGestureType {
+    
+    var gestureModels: [RxCellGestureModel] {
+        return []
+    }
 
-    private var disposebag = DisposeBag()
-        
+    public private(set) var disposebag = DisposeBag()
+            
     public private(set) var indexPath:IndexPath?
+    
+    public let subviewsEventSubject = PublishSubject<[RxCellGestureModel]>()
     
     open override func prepareForReuse() {
         super.prepareForReuse()
@@ -23,6 +29,8 @@ open class RxTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setUI()
         setRx()
+        bindGestureModels()
+
     }
     
     open func setUI() {}
@@ -33,15 +41,14 @@ open class RxTableViewCell: UITableViewCell {
         self.indexPath = indexPath
     }
     
-//    open func tapGestureViewsForCell() -> [RxGestureModel] {
-//        return []
-//    }
-
-
     open override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func bindGestureModels() {
+        subviewsEventSubject.onNext(gestureModels)
     }
 
 }

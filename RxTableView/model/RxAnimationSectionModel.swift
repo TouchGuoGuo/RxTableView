@@ -10,7 +10,7 @@ import RxDataSources
 
 
 public protocol RxAnimationRowType : IdentifiableType,Equatable {
-    var cell:UIView.Type { get }
+    var cell:UIView.Type { get set }
 }
 
 extension RxAnimationRowType where Self: IdentifiableType, Self.Identity == UUID {
@@ -25,13 +25,16 @@ extension RxAnimationRowType where Self: IdentifiableType, Self.Identity == UUID
 }
 
 public struct AnyRxAnimationRowType: RxAnimationRowType {
-    let _base: any RxAnimationRowType
+    
+    var _base: any RxAnimationRowType
     private let cachedIdentity: UUID
 
     public var cell: UIView.Type {
-        return _base.cell
+        set {}
+        get {
+            return _base.cell
+        }
     }
-    
     public var identity: UUID {
         return cachedIdentity
     }
