@@ -1,16 +1,10 @@
 # RxTableView
 
-
-## 特性
-
-1、一行代码快速实现UITableView/UICollectionView(暂时未实现)数据源绑定
+1、几行代码快速实现UITableView/UICollectionView(暂时未实现)数据源绑定
 
 2、通过RxDataSource快速管理UITableView数据源
 
 3、允许动态插入数据以及混合样式
-
--
-
 
 ## 安装 
 
@@ -30,10 +24,9 @@ end
 ```swift
 import RxTableView+RxCollectionView
 ```
-##### 2.1、创建不带动画的TableView数据模型 
+##### 2.1、创建不带动画的模型需要遵循RxRowType
 	
 ```swift
-/// 创建的模型需要遵循RxRowType
 struct RxTableViewControllerModel : RxRowType {
     /// 传入创建的cell
     var cell: UIView.Type = RxTableViewControllerCell.self
@@ -42,18 +35,22 @@ struct RxTableViewControllerModel : RxRowType {
 }
 ```
 
-##### 2.2、创建带动画的TableView数据模型 
-/// 创建带有动画的模型需要遵循RxAnimationRowType
+##### 2.2、创建带有动画的模型需要遵循RxAnimationRowType
+
+```swift
 struct RxTableViewControllerModel : RxAnimationRowType {
     /// 传入创建的cell
     var cell: UIView.Type = RxTableViewControllerCell.self
     /// 数据源
     var title:String
 }
+```
 
 ##### 3、创建TableView 以及TableViewCell
+
+###### 可以通过代码或者xib创建UITableViewCell,但是都需要继承RxTableViewCell，不然无法进行数据的绑定
+
 ```swift
-/// 可以通过代码或者xib创建UITableViewCell,但是都需要继承RxTableViewCell，不然无法进行数据的绑定
 class RxTableViewControllerCell : RxTableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
