@@ -19,7 +19,7 @@
 ```ruby
 use_frameworks!
 target '<Your Target Name>' do
-pod 'RxTableView+RxCollectionView'
+	pod 'RxTableView+RxCollectionView'
 end
 ```
 
@@ -122,18 +122,18 @@ public func closeEdit(animated:Bool = true)
 ```swift 
 /// 不带动画样式的数据源
 var models:[RxTableViewControllerModel] = [
-RxTableViewControllerModel(title:"老虎"),
-RxTableViewControllerModel(title:"狮子"),
-RxTableViewControllerModel(title:"兔子"),
-RxTableViewControllerModel(title:"猴子")
+	RxTableViewControllerModel(title:"老虎"),
+	RxTableViewControllerModel(title:"狮子"),
+	RxTableViewControllerModel(title:"兔子"),
+	RxTableViewControllerModel(title:"猴子")
 ]
 
 /// 带动画样式的数据源
 var models:[RxTableViewControllerModel] = [
-AnyRxAnimationRowType(RxTableViewControllerModel(title:"老虎")),
-AnyRxAnimationRowType(RxTableViewControllerModel(title:"狮子")),
-AnyRxAnimationRowType(RxTableViewControllerModel(title:"兔子")),
-AnyRxAnimationRowType(RxTableViewControllerModel(title:"猴子"))
+	AnyRxAnimationRowType(RxTableViewControllerModel(title:"老虎")),
+	AnyRxAnimationRowType(RxTableViewControllerModel(title:"狮子")),
+	AnyRxAnimationRowType(RxTableViewControllerModel(title:"兔子")),
+	AnyRxAnimationRowType(RxTableViewControllerModel(title:"猴子"))
 ]
 
 /// 创建不带动画的section
