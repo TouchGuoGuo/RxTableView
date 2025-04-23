@@ -259,6 +259,7 @@ class BaseVC: UIViewController {
                     $0.removeLast()
                 })
                 animationTableView.list.updateItems(inSection: section, modify: {
+                    
                     if $0.isEmpty {return}
                     $0.removeLast()
                 })

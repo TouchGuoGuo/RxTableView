@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RxTableView+RxCollectionView"
-  spec.version      = "1.0.9"
+  spec.version      = "1.1.0"
   spec.summary      = "结合RxSwift+RxDataSource便捷设置UITableView/UICollectionView数据源."
 
   # This description is used to generate tags and improve search results.
@@ -136,8 +136,6 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency "RxSwift"
   spec.dependency "RxDataSources"
-  spec.dependency "EmptyDataSet-Swift"
-  spec.dependency "MJRefresh"
   spec.dependency "RxGesture"
 
 end

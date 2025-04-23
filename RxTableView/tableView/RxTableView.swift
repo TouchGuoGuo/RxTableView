@@ -81,7 +81,7 @@ open class RxTableView : UITableView {
     public var indexTitlesGesture = PublishSubject<(String,Int)>()
     
     /// 允许编辑
-    var allowEdit:Bool = false
+    private var allowEdit:Bool = false
     
     /// 允许拖动
     private var allowMove:Bool = false
